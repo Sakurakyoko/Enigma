@@ -1,0 +1,148 @@
+/*
+ * To get an explanation of how this layout works see:
+ * http://matthewjamestaylor.com/blog/equal-height-columns-cross-browser-css-no-hacks
+ */
+
+body {
+  margin:0;
+  padding:0;
+  width:100%;
+  background:#fff;
+  font-family: sans-serif;
+}
+a {
+  color:#369;
+}
+a:hover {
+  color:#fff;
+  background:#369;
+  text-decoration:none;
+}
+h1, h2, h3 {
+  margin:.8em 0 .2em 0;
+  padding:0;
+}
+p {
+  margin:.4em 0 .8em 0;
+  padding:0;
+}
+img {
+  margin:10px 0 5px;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+/* layout rules */
+#header {
+  clear:both;
+  float:left;
+  width:100%;
+}
+#header {
+  background-color:#fee;
+  border-bottom:1px solid #000;
+}
+#header p,
+#header h1,
+#header h2 {
+  padding:.4em 15px 0 15px;
+  margin:0;
+}
+#header ul {
+  clear:left;
+  float:left;
+  width:100%;
+  list-style:none;
+  padding:.4em 15px 0 15px;
+  margin:0;
+}
+#header ul li {
+  display:inline;
+  list-style:none;
+  margin:0;
+  padding:0;
+}
+#header ul li a {
+  display:block;
+  float:left;
+  margin:0 0 0 1px;
+  padding:3px 10px;
+  text-align:center;
+  color:#000;
+  text-decoration:none;
+  position:relative;
+  left:15px;
+  line-height:1.3em;
+}
+#header ul li a:hover {
+  background:#369;
+  color:#fff;
+}
+#header ul li a.active,
+#header ul li a.active:hover {
+  color:#fff;
+  background:#000;
+  font-weight:bold;
+}
+#header ul li a span {
+  display:block;
+}
+
+table.data {
+  width: 75%;
+  margin: 5px;
+  border: thin solid black;
+  border-collapse: collapse;
+}
+
+table.data th, table.data td {
+  margin: 5px;
+  padding: 0px;
+  border: thin solid black;
+}
+
+/* column container */
+.mainbg {
+  clear:both;
+  overflow:hidden; /* This chops off any overhanging divs */
+  background:#fff;    /* right column background colour */
+}
+/* common column settings */
+.mainbg, .menubg {
+  float:left;
+  width:100%;
+  position:relative;
+}
+.main,
+.menu {
+  float:left;
+  position:relative;
+  padding:0 0 1em 0;
+  overflow:hidden;
+}
+.mainbg .menubg {
+  right:75%;      /* right column width */
+  background:#f4f4f4; /* left column background colour */
+  border-right: 1px solid black;
+}
+.mainbg .main {
+  width:71%;      /* right column content width */
+  left:102%;      /* 100% plus left column left padding */
+}
+.mainbg .menu {
+  width:21%;      /* left column content width (column width minus left and right padding) */
+  left:6%;      /* (right column left and right padding) plus (left column left padding) */
+}
+/* Footer styles */
+#footer {
+  clear:both;
+  float:left;
+  width:100%;
+  border-top:1px solid #000;
+}
+#footer p {
+  padding:10px;
+  margin:0;
+}

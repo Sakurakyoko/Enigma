@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+
+  <!-- This page contains the form for entering and editing employee data -->
+  <h:head>
+    <title>IGNORED</title>
+
+    <f:metadata>
+      <!-- this tag declares that this page (view) has a parameter
+      named empId, which is will be used to select the right employee
+      (by setting the empId property of the empbean backing bean) -->
+      <f:viewParam name="empId" value="#{empbean.empId}" />
+    </f:metadata>
+  </h:head>
+  <h:body>
+    <ui:composition template="/templates/layout.xhtml">
+      <ui:define name="content">
+        <h2>#{strings.employee_h1}</h2>
+        <h:form>
+          <h:panelGrid columns="2">
+            <h:outputText value="#{strings.employee_id}:" rendered="#{empbean.updating}"  />
+            <h:outputText value="#{empbean.employee.id}" rendered="#{empbean.updating}" />
+            <h:outputText value="#{strings.employee_name}:" />
+            <h:panelGroup>
+              <h:inputText id="name" label="#{strings.employee_name}"
+                           value="#{empbean.employee.name}" required="true" />
+              <h:message for="name" />
+            </h:panelGroup>
+
+            <h:outputText value="#{strings.employee_salary}:" />
+            <h:panelGroup>
+              <h:inputText id="salary" label="#{strings.employee_salary}"
+                           value="#{empbean.employee.salary}" />
+              <h:message for="salary" />
+            </h:panelGroup>
+
+            <h:outputText value="#{strings.employee_department}:" />
+            <h:selectOneMenu value="#{empbean.employee.department}"
+                             converter="#{depconverter}">
+              <f:selectItems value="#{deplistbean.departments}" var="dep"
+                             itemValue="#{dep}" itemLabel="#{dep.name}"
+                             />
+            </h:selectOneMenu>
+          </h:panelGrid>
+
+          <h:commandButton value="#{strings.employee_save}"
+                           action="#{empbean.saveEmployee}" />
+          <h:commandButton value="#{strings.employee_delete}"
+                           rendered="#{empbean.updating}"
+                           action="#{empbean.deleteEmployee}" />
+          <h:commandButton value="#{strings.employee_cancel}" immediate="true"
+                           action="employees" />
+        </h:form>
+      </ui:define>
+    </ui:composition>
+  </h:body>
+</html>

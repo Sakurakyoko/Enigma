@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<!-- This template defines the layout for all pages in the HRMS
+  application -->
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+
+  <h:head>
+    <title>#{strings.hrms_title}</title>
+    <h:outputStylesheet library="css" name="hrms.css" />
+  </h:head>
+  <h:body>
+    <div id="header">
+      <h1>#{strings.hrms_h1}</h1>
+    </div>
+
+    <div class="mainbg">
+      <div class="menubg">
+        <div class="main">
+          <ui:insert name="content">
+            <ui:include src="/templates/nocontent.xhtml" />
+          </ui:insert>
+        </div>
+
+        <div class="menu">
+         <ui:insert name="menu">
+            <ui:include src="/templates/menu.xhtml" />
+          </ui:insert>
+        </div>
+      </div>
+    </div>
+    <div id="footer">
+        <p><h:outputText rendered="#{false}">
+            #{strings.hrms_footer}</h:outputText></p>
+        <h:messages/>
+    </div>
+  </h:body>
+</html>
