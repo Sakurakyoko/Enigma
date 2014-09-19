@@ -1,0 +1,87 @@
+<?xml version='1.0' encoding='UTF-8' ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html">
+
+    <h:head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <h:outputStylesheet name="./css/default.css"/>
+        <h:outputStylesheet name="./css/cssLayout.css"/>
+        <title>Moduloversikt</title>
+    </h:head>
+
+    <h:body>
+
+
+        
+        <ui:composition template="newTemplate.xhtml">
+            <ui:define name="left">
+                 <h:button value="Elev oversikt" outcome="oversiktElev.xhtml" />
+                 <h:button value="Tilbake til hovedmeny" outcome="index.xhtml" />
+            </ui:define>
+            
+           <ui:define name="content">
+                   <table border="1" cellpadding="1" cellspacing="2" summary="Her kan hjelpelærere se hvilken moduler som hver enkelte elev har fått godkjent">
+<h1 style="margin-left:100px;">Oversikt over hvem som har gjort hva, denne siden er ment for hjelpelærere</h1>
+<tr>
+<th>Navn</th>
+<th>Siste godkjente modul</th>
+
+</tr>
+<tr>
+<td>Andreas</td>
+<td>5</td>
+
+</tr>
+<tr>
+<td>Geir</td>
+<td>4</td>
+
+</tr>
+<tr>
+<td>Rolf Arne</td>
+<td>1</td>
+
+</tr>
+<tr>
+<td>Knut</td>
+<td>5</td>
+
+</tr>
+<tr>
+<td>Rollo</td>
+<td>2</td>
+
+</tr>
+<tr>
+<td>Hyacinth</td>
+<td>7</td>
+
+</tr><tr>
+<td>Harald</td>
+<td>8</td>
+
+</tr>
+<tr>
+<td>Ole</td>
+<td>2</td>
+
+</tr>
+<tr>
+<td>Knarl</td>
+<td>0</td>
+
+</tr>
+<tr>
+<td>Gudmund</td>
+<td>0</td>
+
+</tr>
+</table>
+                </ui:define>
+  </ui:composition>
+       
+    </h:body>
+
+</html>
