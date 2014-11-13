@@ -10,11 +10,11 @@
   <h:body>
       <h1>Moduloversikt</h1> 
       
-          <ui:composition template= "newTemplate.xhtml">
-              <ui:define name="left">
+          <ui:composition template="/templates/masterlayout.xhtml">
+              <ui:define name="menuitems">
      <h:panelGrid columns="1" >
          
-        <h:link value="Startside" outcome="index_1" />  
+        <h:link value="Startside" outcome="index" />  
         <h:link value="Modul 1" outcome="Modul 1" /> 
         <h:link value="Modul 2" outcome="Modul 2"/>
         <h:link value="Modul 3" outcome="Modul 3"/>
@@ -34,17 +34,15 @@
                   <h1>Ressurser</h1>
                   
                   <p> 
-Modul 5: 
-
+Modul 8: 
 Læringsmål:
 
 Du har fullført modulen når du:
 
-kan kan bruke verb/substantiv metoden til å finne ut
-hvilke klasser du trenger for å løse et problem
-og hvilke metoder klassene skal ha
-kan bruke scenarier (evt. med CRC kort) til å sjekke at du har funnet klassene og metodene du trenger
-vet hva et design pattern er
+kan lage og kjøre enhetstester i BlueJ
+kan gjennomføre en manuell kodegjennomgang
+kan bruke utskrifter/logging til å finne feil
+kan bruke assert-setninger til å bekrefte at programmeet virker som det skal
                    </p>
                   </ui:define>
               

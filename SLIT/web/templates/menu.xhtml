@@ -2,26 +2,22 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
       xmlns:h="http://java.sun.com/jsf/html"
-      xmlns:ui="http://java.sun.com/jsf/facelets">
-  
-  <!-- This is the start (home) page of the application. It just displays
-  a message. Not very exciting... improvement is possible. -->
-  <h:head>
+      xmlns:fn="http://java.sun.com/jsp/jstl/functions">
+
+  <!-- This is the default sidebar menu for HRMS -->
+  <head>
     <title>IGNORED</title>
-  </h:head>
-  <h:body>
-      
-     
-            
-    <ui:composition template="/templates/masterlayout.xhtml">
-      <ui:define name="content">
-          <h2>Velkommen</h2>
-          <p>Her kan du opprette moduler, og legge til ressurser i modulene</p>
-      </ui:define>
-        
-          <ui:define name="menuitems">
-     <h:panelGrid columns="1">
+  </head>
+
+  <body>
+    <ui:composition>
+      <!-- When this file is included in a templage, only the content of
+      the ui:composition tag is used. The rest is discarded -->
+      <h3>Menu</h3>
+      <!-- the panelGrid line up things nicely... -->
+      <h:panelGrid columns="1">
         <!--
         One link for each menu choice. The outcome specifies the page to go
         to. The styleClass property can be used to select css rules for the
@@ -35,23 +31,14 @@
         highlighted is defined in the stylesheet. It doesn't have to be
         bold)
         -->
-        <h:link value="Startside" outcome="index" /> 
-        <h:link value="Moduler" outcome="Moduler"/>
-        <h:link value="Elever" outcome="Elever" />
-        <h:link value="Godkjenning av moduler" outcome="Godkjenning" />
-    
+        <h:link value="Meny" outcome="hrms"
+                styleClass="#{fn:startsWith(view.viewId,'/hrms') ? 'bold' : 'plain'}" />
+        <h:link value="Departments" outcome="departments"
+                styleClass="#{fn:startsWith(view.viewId,'/department') ? 'bold' : 'plain'}" />
+        <h:link value="Emplyees" outcome="employees"
+                styleClass="#{fn:startsWith(view.viewId,'/employee') ? 'bold' : 'plain'}" />
+        <h:link value="Offices" outcome="offices" />
       </h:panelGrid>
-                   </ui:define>
-        
-         
-       
-    
-   
-          
-   
     </ui:composition>
-      
-      
-      
-  </h:body>
+  </body>
 </html>

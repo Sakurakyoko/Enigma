@@ -10,11 +10,11 @@
   <h:body>
       <h1>Moduloversikt</h1> 
       
-          <ui:composition template= "newTemplate.xhtml">
-              <ui:define name="left">
+          <ui:composition template="/templates/masterlayout.xhtml">
+              <ui:define name="menuitems">
      <h:panelGrid columns="1" >
          
-        <h:link value="Startside" outcome="index_1" />  
+        <h:link value="Startside" outcome="index" />  
         <h:link value="Modul 1" outcome="Modul 1" /> 
         <h:link value="Modul 2" outcome="Modul 2"/>
         <h:link value="Modul 3" outcome="Modul 3"/>
@@ -34,21 +34,19 @@
                   <h1>Ressurser</h1>
                   
                   <p> 
-Modul 9: 
-
+Modul 6: 
 Læringsmål:
 
-I denne modulen skal du lære om arv og subklasser. Arv gjør det mulig å gjenbruke kode på en strukturert måte, og kanskje enda viktigere: Det gjør det mulig å modellere komplekse fenomener uten at koden blir altfor komplisert.
+Du har fullført modulen når du kan:
 
-Du har fullført modulen når du:
-
-kjenner betydningen av begrepene arv, superklasse, subklasse, subtype og substitusjon
-kan lage en subklasse av en annen klasse
-kan bruke superklassens constructor
-vet hvordan du bruker metoder og felt som er arvet fra superklassen
-vet hvilke variable du kan lagre objekter fra subklassen i
-hvet hvordan arv kan brukes til å forenkle gjenbruk av kode
-kjenner til klassen Object, og metodene som blir arvet fra den
+lese og forstå dokumentasjonen for standardbiblioteket
+bruke klasser fra standardbiblioteket
+String, ArrayList, Random, HashMap, Iterator, ...
+skrive dokumentasjon for egne klasser
+bruke public/private
+forklare forskjellen på felt i klassen og klassevariable
+definere konstanter i en klasseil å sjekke at du har funnet klassene og metodene du trenger
+vet hva et design pattern er
                    </p>
                   </ui:define>
               

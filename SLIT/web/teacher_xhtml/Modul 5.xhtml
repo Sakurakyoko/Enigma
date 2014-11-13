@@ -10,11 +10,11 @@
   <h:body>
       <h1>Moduloversikt</h1> 
       
-          <ui:composition template= "newTemplate.xhtml">
-              <ui:define name="left">
+          <ui:composition template="/templates/masterlayout.xhtml">
+              <ui:define name="menuitems">
      <h:panelGrid columns="1" >
          
-        <h:link value="Startside" outcome="index_1" /> 
+        <h:link value="Startside" outcome="index" />  
         <h:link value="Modul 1" outcome="Modul 1" /> 
         <h:link value="Modul 2" outcome="Modul 2"/>
         <h:link value="Modul 3" outcome="Modul 3"/>
@@ -31,28 +31,21 @@
               
               <ui:define name="content">
                   
-                 
+                  <h1>Ressurser</h1>
                   
-         <p>
-              IS-102-1 Grunnkurs i objektorientert programmering, 10 sp 
-          </p>
-                  
-           <p>
-                 
-             <br>Modul 1: BlueJ, Klasser og Objekter</br>
-             <br>Modul 2: Klassedefinisjoner</br>
-             <br>Modul 3: Flere objekter</br>
-             <br>Modul 4: Samlinger av objekter og løkker</br>
-             <br>Modul 5: Designprosessen</br>
-             <br>Modul 6: Dokumentasjon av programmer</br>
-             <br>Modul 7: Designe gode/robuste klasser</br>
-             <br>Modul 8: Testing og debugging</br>
-             <br>Modul 9: Arv og subklasser I</br>
-             <br>Modul 10: Arv og subklasser II</br>
+                  <p> 
+Modul 5: 
 
+Læringsmål:
 
-               </p>
-                  
+Du har fullført modulen når du:
+
+kan kan bruke verb/substantiv metoden til å finne ut
+hvilke klasser du trenger for å løse et problem
+og hvilke metoder klassene skal ha
+kan bruke scenarier (evt. med CRC kort) til å sjekke at du har funnet klassene og metodene du trenger
+vet hva et design pattern er
+                   </p>
                   </ui:define>
               
                 </ui:composition>

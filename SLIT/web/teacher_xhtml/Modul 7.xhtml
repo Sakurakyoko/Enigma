@@ -10,11 +10,11 @@
   <h:body>
       <h1>Moduloversikt</h1> 
       
-          <ui:composition template= "newTemplate.xhtml">
-              <ui:define name="left">
+          <ui:composition template="/templates/masterlayout.xhtml">
+              <ui:define name="menuitems">
      <h:panelGrid columns="1" >
          
-        <h:link value="Startside" outcome="index_1" /> 
+        <h:link value="Startside" outcome="index" />  
         <h:link value="Modul 1" outcome="Modul 1" /> 
         <h:link value="Modul 2" outcome="Modul 2"/>
         <h:link value="Modul 3" outcome="Modul 3"/>
@@ -26,7 +26,6 @@
         <h:link value="Modul 9" outcome="Modul 9"/>
         <h:link value="Modul 10" outcome="Modul 10 "/>
         
-        
         </h:panelGrid>
                    </ui:define>
               
@@ -34,21 +33,18 @@
                   
                   <h1>Ressurser</h1>
                   
-                  <p> Modul 1 Lærligsmål: 
+                  <p> 
+Modul 7: 
+Læringsmål:
 
-Du har fullført modulen når du kan
-Bruke BlueJ, bl.a. til å:
-Åpne, lagre, og lukke prosjekter.
-Lage objekter.
-Kalle metoder i objektene, med og uten parametere.
-Bruke editoren til å se på kildekoden til en klasse.
-Kunne kompilere prosjektet.
-Litt java, du skal f.eks.
-Kunne kjenne igjen en klassedefinisjon, og kunne finne navnet på klassen.
-Kjenne til forskjellige typer data.
-Kalle metoder med et objekt som parameter.
-Kalle metoder som returnerer en verdi.
-Kjenne forskjellen mellom klasser og objekter.
+Du har fullført modulen når du:
+
+kjenner konsekvensene av dårlig design
+vet hva duplisering av kode er, og hvorfor det ikke er bra
+vet hva 'localizing change' betyr
+kjenner betydningen av begrepene kobling (coupling) og sammenheng (cohesion)
+kjenner begrepet innkapsling (encapsulation) og kan bruke det til å redusere kobling
+vet hva refactoring er, og kan bruke refactoring til å forbedre et system
                    </p>
                   </ui:define>
               

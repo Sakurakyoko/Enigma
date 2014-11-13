@@ -10,11 +10,11 @@
   <h:body>
       <h1>Moduloversikt</h1> 
       
-          <ui:composition template= "newTemplate.xhtml">
-              <ui:define name="left">
+         <ui:composition template="/templates/masterlayout.xhtml">
+              <ui:define name="menuitems">
      <h:panelGrid columns="1" >
          
-        <h:link value="Startside" outcome="index_1" />  
+        <h:link value="Startside" outcome="index" />  
         <h:link value="Modul 1" outcome="Modul 1" /> 
         <h:link value="Modul 2" outcome="Modul 2"/>
         <h:link value="Modul 3" outcome="Modul 3"/>
@@ -33,20 +33,18 @@
                   
                   <h1>Ressurser</h1>
                   
-                  <p> 
-Modul 6: 
-Læringsmål:
+                  <p> Modul 2 Læringsmål:
 
-Du har fullført modulen når du kan:
-
-lese og forstå dokumentasjonen for standardbiblioteket
-bruke klasser fra standardbiblioteket
-String, ArrayList, Random, HashMap, Iterator, ...
-skrive dokumentasjon for egne klasser
-bruke public/private
-forklare forskjellen på felt i klassen og klassevariable
-definere konstanter i en klasseil å sjekke at du har funnet klassene og metodene du trenger
-vet hva et design pattern er
+Du har fullført modulen når du
+Kan lese en klassedefinisjon, og kunne fortelle
+hva klassen heter.
+Hvilke felt den har, hva de heter og hvilken type de har
+hvilke metoder den har, og hva metodene heter.
+Beskrive parametere (med navn og type) og returverdi for alle metodene.
+Kjenner forskjellen på forskjellige slags metoder (constructors, getters, setters) og vet hva de brukes til.
+Kan skrive en klassedefinisjon
+med felt og metoder i riktig rekkefølge
+med metoder som bruker tilordning, if-setninger og utskrifter.
                    </p>
                   </ui:define>
               
