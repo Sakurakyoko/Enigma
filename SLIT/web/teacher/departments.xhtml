@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+
+  <!-- This page displays all departments in list form, with buttons for
+    adding and deleting departments -->
+
+  <h:head>
+    <title>IGNORED</title>
+  </h:head>
+  <h:body>
+    <ui:composition template="/templates/masterlayout.xhtml">
+      <ui:define name="content">
+        <!-- This page displays the list of departments with
+        links for editing, and a button for creating new ones -->
+        <h2>departments_h1</h2>
+
+        <!-- The dataTable tag is used to display the list.
+        It works a bit like a for-each loop in java. The
+        var attribute binds the name dep to each department in turn
+        -->
+        <h:dataTable value="#{deplistbean.departments}" var="dep"
+                     styleClass="data">
+          <h:column>
+            <f:facet name="header">department_depno</f:facet>
+            #{dep.depNo}
+          </h:column>
+          <h:column>
+            <f:facet name="header">departments_name</f:facet>
+            <!-- The department name is a link to a detail page for the department -->
+            <h:link outcome="department?depno=#{dep.depNo}">#{dep.name}</h:link>
+          </h:column>
+        </h:dataTable>
+
+        <h:link value="departments_new" outcome="department?depno=0" />
+      </ui:define>
+    </ui:composition>
+  </h:body>
+</html>
